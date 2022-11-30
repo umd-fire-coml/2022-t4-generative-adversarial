@@ -1,0 +1,4 @@
+tensorflow==2.9.1
+gdown==4.4.0
+streamlit==1.10.0
+streamlit-tags==1.2.7
