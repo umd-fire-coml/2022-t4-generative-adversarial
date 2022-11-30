@@ -11,7 +11,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # FUNCTIONS
 # create embeddings
-def get_embeddings(text, token_length, tokenizer, model):
+def get_embeddings(text: str, token_length: int, tokenizer, model):
     tokens = tokenizer(text, max_length=token_length,
                        padding='max_length', truncation=True)
     output = model(torch.tensor(tokens.input_ids).unsqueeze(0),
