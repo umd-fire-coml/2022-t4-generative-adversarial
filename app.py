@@ -6,7 +6,7 @@ from streamlit_tags import st_tags
 import json
 
 # CUSTOM
-from NLP.nlp import get_nearest_tags as nlp_tags
+from NLP.nlp import get_nearest_tags
 
 
 f = open('NLP/tags.json')        # OPEN JSON FILE
@@ -76,6 +76,7 @@ else:
     # SUBMIT TAGS
     if st.button("Submit Tags"):
         st.write("Tags are:")
-        input = genre + mood + instrument
-        input = nlp_tags(input)
-        st.write(str(input))
+        inp = genre + mood + instrument
+        st.write("Before: " + str(inp))
+        input = get_nearest_tags(inp)
+        st.write("After: " + str(input))
