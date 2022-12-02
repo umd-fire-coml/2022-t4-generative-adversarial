@@ -47,7 +47,7 @@ if option == "Sentence Based":
 else:
     st.write("Enter Genre(s), Mood/Theme(s), and Instrument(s)")
 
-    instructions = "Press enter to add more"
+    instructions = "Press ENTER to add more"
 
     genre = st_tags(
             label = 'Enter Genre(s):',
