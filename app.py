@@ -6,7 +6,7 @@ from streamlit_tags import st_tags
 import json
 
 # CUSTOM
-from NLP.nlp import get_nearest_tags
+from nlp.nlp import get_nearest_tags
 
 
 f = open('NLP/tags.json')        # OPEN JSON FILE
