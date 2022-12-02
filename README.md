@@ -1,8 +1,8 @@
 ---
 title: Fire Coml FALL 2022
 emoji: 🎶
-colorFrom: blue
-colorTo: orange
+colorFrom: green
+colorTo: indigo
 sdk: streamlit
 sdk_version: 1.10.0
 app_file: app.py
