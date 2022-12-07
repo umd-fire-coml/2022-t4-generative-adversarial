@@ -7,7 +7,7 @@ import torch
 from typing import List
 from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
-
+import streamlit as st
 
 # FUNCTIONS
 # create embeddings
@@ -40,19 +40,23 @@ def nearest_doc(doc_list: List[str],
 
 # MAIN 
 def get_nearest_tags(user_tags: List[str]):
+    st.write("function called")
     # download pretrained model
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased",)
     model = AutoModel.from_pretrained("bert-base-uncased",
                                       output_hidden_states=True)
 
+    st.write("model downloaded")
     # get tag lists from local json file
     with open("./nlp/tags.json", "r") as jf:
         tags = json.load(jf)
 
+    st.write("json opened")
     # separate tags by type
     user_genre, user_mood, user_instr = user_tags
     genres, moods, instrs = tags["genre"], tags["mood"], tags["instrument"]
 
+    st.write("waiting on return")
     return (
         nearest_doc(genres, user_genre, tokenizer, model),
         nearest_doc(moods, user_mood, tokenizer, model),
