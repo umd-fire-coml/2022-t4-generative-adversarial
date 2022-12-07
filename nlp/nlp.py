@@ -9,6 +9,7 @@ from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
+
 # FUNCTIONS
 # create embeddings
 def get_embeddings(text: str, token_length: int, tokenizer, model):
@@ -17,7 +18,7 @@ def get_embeddings(text: str, token_length: int, tokenizer, model):
     output = model(torch.tensor(tokens.input_ids).unsqueeze(0),
                    attention_mask=torch.tensor(
                        tokens.attention_mask
-                    ).unsqueeze(0)).hidden_states[-1]
+    ).unsqueeze(0)).hidden_states[-1]
     return torch.mean(output, axis=1).detach().numpy()
 
 
@@ -26,19 +27,24 @@ def nearest_doc(doc_list: List[str],
                 query: str,
                 tokenizer,
                 model,
-                token_length: int = 50):
+                token_length: int = 10):
+
+    # if query is already in doc list, return query
+    if query in doc_list:
+        return query
+
     # get embeddings for each document
     outs = [
         get_embeddings(doc, token_length, tokenizer, model) for doc in doc_list
     ]
     # get embeddings for query
-    query_embeddings = get_embeddings(query, token_length=token_length)
+    query_embeddings = get_embeddings(query, token_length, tokenizer, model)
     # get similarity of each document embedding to query embedding
     sims = [cosine_similarity(out, query_embeddings)[0][0] for out in outs]
     return max(zip(sims, doc_list))[1]
 
 
-# MAIN 
+# MAIN
 def get_nearest_tags(user_tags: List[str]):
     st.write("function called")
     # download pretrained model
