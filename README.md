@@ -1,3 +1,14 @@
+---
+title: Fire Coml FALL 2022
+emoji: 🎶
+colorFrom: green
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.10.0
+app_file: app.py
+pinned: false
+---
+
 # Tag-based Audio Generation
 
 ## Description
@@ -23,6 +34,7 @@ User inputs one genre tag, mood tag, and instrument tag into frontend. Each tag 
 ## Model Architecture Diagrams
 
 TODO: NLP model diagram
+
 TODO: Audio generation model diagram
 
 ## Directory Guide
