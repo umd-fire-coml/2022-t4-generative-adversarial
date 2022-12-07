@@ -46,7 +46,7 @@ def get_nearest_tags(user_tags: List[str]):
                                       output_hidden_states=True)
 
     # get tag lists from local json file
-    with open("./tags.json", "r") as jf:
+    with open("./nlp/tags.json", "r") as jf:
         tags = json.load(jf)
 
     # separate tags by type
