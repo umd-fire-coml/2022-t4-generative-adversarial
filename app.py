@@ -2,12 +2,11 @@
 import streamlit as st
 from streamlit_tags import st_tags
 
-# PYHTON STUFF
+# PYTHON STUFF
 import json
 
 # CUSTOM
 from nlp.nlp import get_nearest_tags
-
 
 f = open('nlp/tags.json')        # OPEN JSON FILE
 
@@ -33,33 +32,33 @@ st.write("Enter Genre(s), Mood/Theme(s), and Instrument(s)")
 instructions = "Press ENTER to add more"
 
 genre = st_tags(
-        label = 'Enter Genre(s):',
-        text = instructions,
-        suggestions = GENRE_TAGS,
-        maxtags = MAX_TAGS,
-        key = '1'
-    )
+    label='Enter Genre(s):',
+    text=instructions,
+    suggestions=GENRE_TAGS,
+    maxtags=MAX_TAGS,
+    key='1'
+)
 
 mood = st_tags(
-        label = 'Enter Mood/Theme(s):',
-        text = instructions,
-        suggestions = MOOD_TAGS,
-        maxtags = MAX_TAGS,
-        key = '2'
-    )
+    label='Enter Mood/Theme(s):',
+    text=instructions,
+    suggestions=MOOD_TAGS,
+    maxtags=MAX_TAGS,
+    key='2'
+)
 
 instrument = st_tags(
-        label = 'Enter Instrument(s):',
-        text = instructions,
-        suggestions = INSTRUMENT_TAGS,
-        maxtags = MAX_TAGS,
-        key = '3'
-    )
+    label='Enter Instrument(s):',
+    text=instructions,
+    suggestions=INSTRUMENT_TAGS,
+    maxtags=MAX_TAGS,
+    key='3'
+)
 
 # SUBMIT TAGS
 if st.button("Submit Tags"):
     st.write("Tags are:")
     inp = genre + mood + instrument
     st.write("Before: " + str(inp))
-    input = get_nearest_tags(inp)
-    st.write("After: " + str(input))
+    input_tags = get_nearest_tags(inp)
+    st.write("After: " + str(input_tags))
