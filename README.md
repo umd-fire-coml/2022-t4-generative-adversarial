@@ -22,7 +22,9 @@ User inputs a genre tag into frontend. This tag is passed to semantic similarity
 
 ## Model Architecture Diagrams
 
-![NLP Architecture Diagram](./assets/NLP_model_architecture.png)
+![NLP Architecture Diagram](./assets/NLP_model_architecture.png =250x)
+
+The BERT Base NLP model is based of a general use transoformer
 
 ![GAN Architecture Diagram](./assets/GAN_architecture.png)
 
