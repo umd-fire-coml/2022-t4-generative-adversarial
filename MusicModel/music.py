@@ -2,6 +2,10 @@
 
 # https://github.com/marcoppasini/musika
 
-# HELPER FUNCTIONS
+# FUNCTIONS
+def train_model():
+    return "TODO"
 
-# MAIN FUNCTION TO CALL
+
+def generate_music():
+    return "TODO"
