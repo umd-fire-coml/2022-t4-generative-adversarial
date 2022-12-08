@@ -9,9 +9,7 @@ import json
 from nlp.nlp import get_nearest_tags
 
 f = open('nlp/tags.json')        # OPEN JSON FILE
-
 data = json.load(f)             # LOAD DATA
-
 f.close()                       # CLOSE FILE
 
 # --------------------------- VARIABLES / MACROS
