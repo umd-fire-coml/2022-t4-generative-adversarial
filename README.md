@@ -18,21 +18,27 @@ https://user-images.githubusercontent.com/38502391/206556651-da596bd5-7257-4985-
 
 ### Explanation
 
-User inputs a genre tag into frontend. This tag is passed to semantic similarity NLP model to determine nearest tag within training space, and implicitly coerces to (outputs) the found tag. This tag is passed to the audio generation model as input, which produces generated audio that is playable on the frontend.
+User inputs a genre tag into frontend. This tag is passed to the semantic similarity NLP model to determine the nearest tag within training the space, and implicitly coerces to (outputs) the found tag. This tag is passed to the audio generation model as input, which produces generated audio that is playable on the frontend.
 
 ## Model Architecture Diagrams
 
+### NLP Model
+
 ![NLP Architecture Diagram](./assets/NLP_model_architecture.png)
 
-The BERT Base NLP model is based on a general use transformer. The model is extensively pre-trained on a "corpus of English data." After which the model can be finetuned through less resource intensive training to produce state-of-the-art results. Check the citations to find a link to an interactive verison of the model.
+The BERT Base NLP model is based on a general use transformer. The model is extensively pre-trained on a "corpus of English data." After which the model can be fine-tuned through less resource intensive training to produce state-of-the-art results. Check the citations to find a link to an interactive verison of the model.
+
+### GAN
 
 ![GAN Architecture Diagram](./assets/GAN_architecture.png)
 
-The GAN model to generate the music utilizes the architecture shown above. It uses embeddings generated from encodings of music to train the discriminator and generator. Input is provided in the form of a sequence which is made of two seperate sequences joined together that are combined with respect to time. The model is then trianed on these sequences to generate sequnces that flow according to time.
+The GAN model to generate the music utilizes the architecture shown above. It uses embeddings generated from encodings of music to train the discriminator and generator. Input is provided in the form of a sequence which is made of two seperate sequences joined together that are combined with respect to time. The model is then trained on these sequences to generate sequences that flow according to time.
+
+### Encoder/Decoder
 
 ![Encoder/Decoder Architecture Diagram](./assets/Encoder_Decoder_Architecture.png)
 
-The Encoder/Decoder model converts audio files into spectrograms which it uses to create embeddings. Encodings of the various audio files provided for training are created during this process and saved. After the GAN generates a sequence using the provided encodings the decoder decodes them and outputs the the spectrogrma of the model which is then converted back to waveform. 
+The Encoder/Decoder model converts audio files into spectrograms which it uses to create embeddings. Encodings of the various audio files provided for training are created during this process and saved. After the GAN generates a sequence using the provided encodings the decoder decodes them and outputs a spectrogram which is then converted back to the waveform domain. 
 
 
 ## Directory Guide
