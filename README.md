@@ -22,13 +22,17 @@ User inputs a genre tag into frontend. This tag is passed to semantic similarity
 
 ## Model Architecture Diagrams
 
-![NLP Architecture Diagram](./assets/NLP_model_architecture.png =250x)
+![NLP Architecture Diagram](./assets/NLP_model_architecture.png)
 
-The BERT Base NLP model is based of a general use transoformer
+The BERT Base NLP model is based on a general use transformer. The model is extensively pre-trained on a "corpus of English data." After which the model can be finetuned through less resource intensive training to produce state-of-the-art results. Check the citations to find a link to an interactive verison of the model.
 
 ![GAN Architecture Diagram](./assets/GAN_architecture.png)
 
+The GAN model to generate the music utilizes the architecture shown above. It uses embeddings generated from encodings of music to train the discriminator and generator. Input is provided in the form of a sequence which is made of two seperate sequences joined together that are combined with respect to time. The model is then trianed on these sequences to generate sequnces that flow according to time.
+
 ![Encoder/Decoder Architecture Diagram](./assets/Encoder_Decoder_Architecture.png)
+
+The Encoder/Decoder model converts audio files into spectrograms which it uses to create embeddings. Encodings of the various audio files provided for training are created during this process and saved. After the GAN generates a sequence using the provided encodings the decoder decodes them and outputs the the spectrogrma of the model which is then converted back to waveform. 
 
 
 ## Directory Guide
@@ -64,7 +68,7 @@ The BERT Base NLP model is based of a general use transoformer
                         Jan Schlüter},
     title           =   {Musika! Fast Infinite Waveform Music Generation},
     year            =   {2022},
-    url             =   {https://github.com/marcoppasini/musika},
+    url             =   {https://github.com/marcoppasini/musika },
     archivePrefix   =   {arXiv},
     doi             =   {10.48550/ARXIV.2208.08706}
  }
@@ -80,7 +84,7 @@ The BERT Base NLP model is based of a general use transoformer
     journal         =   {CoRR},
     volume          =   {abs/1810.04805},
     year            =   {2018},
-    url             =   {https://huggingface.co/bert-base-uncased},
+    url             =   {https://huggingface.co/bert-base-uncased },
     archivePrefix   =   {arXiv},
     eprint          =   {1810.04805},
     timestamp       =   {Tue, 30 Oct 2018 20:39:56 +0100},
