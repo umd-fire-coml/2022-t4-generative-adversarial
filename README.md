@@ -10,7 +10,7 @@ Audio generation when given a genre as natural language input
 
 ## Youtube Video demo
 
-![YouTube Demo](./assets/video_demo.mp4)
+https://user-images.githubusercontent.com/38502391/206556651-da596bd5-7257-4985-8202-0a2f7bc0313f.mp4
 
 ## System Architecture Diagram
 
