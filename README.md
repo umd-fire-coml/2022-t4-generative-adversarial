@@ -1,14 +1,3 @@
----
-title: Fire Coml FALL 2022
-emoji: 🎶
-colorFrom: green
-colorTo: indigo
-sdk: streamlit
-sdk_version: 1.10.0
-app_file: app.py
-pinned: false
----
-
 # Tag-based Audio Generation
 
 ## Description
@@ -17,11 +6,11 @@ Model to generate audio given input genre(s), mood(s), and instrument(s)
 
 ## Link to demo app
 
-https://huggingface.co/spaces/SLAYEROFALL3050/Audio_Generator_Using_GAN
+[Google Colab Notebook](https://colab.research.google.com/drive/17G45yw0ZzsD84X-Q3RHPy6ER9Pb-u6hK)
 
 ## Youtube Video demo
 
-TODO
+[YouTube Demo](https://youtu.be/cZIcJ5TRCmA)
 
 ## System Architecture Diagram
 
@@ -29,7 +18,7 @@ TODO
 
 ### Explanation
 
-User inputs one genre tag, mood tag, and instrument tag into frontend. Each tag is passed to semantic similarity NLP model to determine nearest tags within training space, and coerces to (outputs) found training space genre, mood, and instrument tag. Those tags are passed to the audio generation model as input, which produces generated audio which is playable on the frontend.
+User inputs a genre tag into frontend. This tag is passed to semantic similarity NLP model to determine nearest tag within training space, and implicitly coerces to (outputs) the found tag This tag is passed to the audio generation model as input, which produces generated audio which is playable on the frontend.
 
 ## Model Architecture Diagrams
 
