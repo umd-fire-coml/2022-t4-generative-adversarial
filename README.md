@@ -30,6 +30,7 @@ TODO: Audio generation model diagram
 
  - `assets/`
 	 - `system_architecture.png`: System architecture diagram
+     - `video_demo.mp4`: Video demonstration of generating and playing audio on frontend
  - `.gitignore`: List of files and folders to ignore when committing to repo
  - `frontend.ipynb`: Python notebook with frontend of demo app
  - `model_trainer`: Python notebook to train the model on an example (or user-provided) dataset
