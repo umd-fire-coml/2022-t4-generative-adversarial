@@ -10,7 +10,7 @@ Audio generation when given a genre as natural language input
 
 ## Youtube Video demo
 
-[![YouTube Demo](http://img.youtube.com/vi/cZIcJ5TRCmA/0.jpg)](http://www.youtube.com/watch?v=cZIcJ5TRCmA "FIRE COML 2022: Tag-based Audio Generation Demo")
+![YouTube Demo](./assets/video_demo.mp4)
 
 ## System Architecture Diagram
 
