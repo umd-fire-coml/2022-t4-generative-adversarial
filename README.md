@@ -22,9 +22,12 @@ User inputs a genre tag into frontend. This tag is passed to semantic similarity
 
 ## Model Architecture Diagrams
 
-TODO: NLP model diagram
+![NLP Architecture Diagram](./assets/NLP_model_architecture.png)
 
-TODO: Audio generation model diagram
+![GAN Architecture Diagram](./assets/GAN_architecture.png)
+
+![Encoder/Decoder Architecture Diagram](./assets/Encoder_Decoder_Architecture.png)
+
 
 ## Directory Guide
 
@@ -54,4 +57,31 @@ TODO: Audio generation model diagram
 
 ## Citations and References
 
-TODO
+ @article{
+    author          =   {Marco Pasini and
+                        Jan Schlüter},
+    title           =   {Musika! Fast Infinite Waveform Music Generation},
+    year            =   {2022},
+    url             =   {https://github.com/marcoppasini/musika},
+    archivePrefix   =   {arXiv},
+    doi             =   {10.48550/ARXIV.2208.08706}
+ }
+
+@article{
+    DBLP:journals/corr/abs-1810-04805,
+    author          =   {Jacob Devlin and
+                        Ming{-}Wei Chang and
+                        Kenton Lee and
+                        Kristina Toutanova},
+    title           =   {{BERT:} Pre-training of Deep Bidirectional Transformers for Language
+                        Understanding},
+    journal         =   {CoRR},
+    volume          =   {abs/1810.04805},
+    year            =   {2018},
+    url             =   {https://huggingface.co/bert-base-uncased},
+    archivePrefix   =   {arXiv},
+    eprint          =   {1810.04805},
+    timestamp       =   {Tue, 30 Oct 2018 20:39:56 +0100},
+    biburl          =   {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},
+    bibsource       =   {dblp computer science bibliography, https://dblp.org}
+}
