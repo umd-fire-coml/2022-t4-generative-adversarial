@@ -67,33 +67,10 @@ The Encoder/Decoder model converts audio files into spectrograms which it uses t
 3. In the `Generate Audio` cell, input the name of a genre. 
 4. Run the `Generate Audio` cell. This will output a playable HTML Audio element which you can use to listen to the generated audio. Since this is a generation model, you can subjectively assess audio quality and genre to "test" the model.
 
-## Citations and References
+## Citations
 
- @article{
-    author          =   {Marco Pasini and
-                        Jan Schlüter},
-    title           =   {Musika! Fast Infinite Waveform Music Generation},
-    year            =   {2022},
-    url             =   {https://github.com/marcoppasini/musika },
-    archivePrefix   =   {arXiv},
-    doi             =   {10.48550/ARXIV.2208.08706}
- }
+ [1]
+M. Pasini and J. Schlüter, ‘Musika! Fast Infinite Waveform Music Generation’, arXiv preprint arXiv:2208. 08706, 2022.
 
-@article{
-    DBLP:journals/corr/abs-1810-04805,
-    author          =   {Jacob Devlin and
-                        Ming{-}Wei Chang and
-                        Kenton Lee and
-                        Kristina Toutanova},
-    title           =   {{BERT:} Pre-training of Deep Bidirectional Transformers for Language
-                        Understanding},
-    journal         =   {CoRR},
-    volume          =   {abs/1810.04805},
-    year            =   {2018},
-    url             =   {https://huggingface.co/bert-base-uncased },
-    archivePrefix   =   {arXiv},
-    eprint          =   {1810.04805},
-    timestamp       =   {Tue, 30 Oct 2018 20:39:56 +0100},
-    biburl          =   {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},
-    bibsource       =   {dblp computer science bibliography, https://dblp.org}
-}
+[2]
+J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, ‘BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding’, CoRR, vol. abs/1810.04805, 2018.
