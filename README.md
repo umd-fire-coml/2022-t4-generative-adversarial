@@ -26,13 +26,13 @@ User inputs a genre tag into frontend. This tag is passed to the semantic simila
 
 ![NLP Architecture Diagram](./assets/NLP_model_architecture.png)
 
-The BERT Base NLP model is based on a general use transformer. The model is extensively pre-trained on a "corpus of English data." After which the model can be fine-tuned through less resource intensive training to produce state-of-the-art results. Check the citations to find a link to an interactive verison of the model.
+The BERT Base NLP model is based on a general use transformer. The model is extensively pre-trained on a "corpus of English data." After which the model can be fine-tuned through less resource intensive training to produce state-of-the-art results. This model was used to produce word/document embeddings for several genres ("tags"), which then get compared to the user input tag's embeddings using a cosine similarity function. The tag within the training space with the highest similarity is fed to the GAN.
 
 ### GAN
 
 ![GAN Architecture Diagram](./assets/GAN_architecture.png)
 
-The GAN model to generate the music utilizes the architecture shown above. It uses embeddings generated from encodings of music to train the discriminator and generator. Input is provided in the form of a sequence which is made of two seperate sequences joined together that are combined with respect to time. The model is then trained on these sequences to generate sequences that flow according to time.
+The GAN model to generate the music utilizes the architecture shown above with the discriminator component on the right. Input is provided in the form of a sequence which is made of two seperate sequences joined together that are combined with respect to time. The model is then trained on these sequences to generate sequences that flow according to time.
 
 ### Encoder/Decoder
 
